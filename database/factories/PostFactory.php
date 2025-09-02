@@ -17,9 +17,9 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => 4, // 既に存在するユーザーのID
-            'title'   => $this->faker->sentence, 
-            'content' => $this->faker->paragraph, 
+            'user_id' => 1, // usersテーブルにidカラムの値が1のユーザーが存在することが前提
+            'title' => fake()->realText(20, 5),
+            'content' => fake()->realText(200, 5)
         ];
     }
     //
